@@ -8,22 +8,21 @@
     <title>Portfolio</title>
 
     <!-- CSS -->
-    <link rel="stylesheet" href="css/app.html">
+    <link rel="stylesheet" href="css/app.css">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/sidebar.css">
     <link rel="stylesheet" href="css/projects.css">
     <link rel="stylesheet" href="css/resume.css">
 
     <!-- Font Awesome -->
-    <link rel="stylesheet" href="../cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
     <style>
         /* ✅ Always show hamburger (desktop + mobile) */
         #hamburger {
             position: fixed;
             top: 15px;
             left: 15px;
-            z-index: 9999;
+            z-index: 2000;
             background: none;
             border: none;
             font-size: 1.8rem;
@@ -43,10 +42,13 @@
             transition: left 0.3s ease;
             z-index: 1000;
             box-shadow: 3px 0 8px rgba(0, 0, 0, 0.1);
+
+            overflow-y:auto !important;
+            scrollbar-width: none !important;
         }
 
-        #sidebar.active {
-            left: 0;
+        #sidebar::-webkit-scrollbar{
+            display: none !important;
         }
 
         /* ✅ Content */
@@ -54,13 +56,17 @@
             transition: margin-left 0.3s ease;
         }
 
-        body.sidebar-open #main-content {
+       body.sidebar-open #main-content {
             margin-left: 260px;
+        }
+        body.sidebar-open #hamburger{
+            position: fixed !important;
+            left: calc(15px+260px);
         }
 
         @media (max-width: 768px) {
-            body.sidebar-open #main-content {
-                margin-left: 0;
+            body.sidebar-open #hamburger{
+                left: 15px;
             }
         }
     </style>

@@ -20,11 +20,15 @@
 
 /* Sidebar inner */
 #sidebar .sidebar-inner {
-    padding: 40px 15px 20px;
-    height: 100%;
-    overflow-y: auto;
+    padding: 15px 15px 15px;
+    height: auto;
+    overflow-y: visible;
+    scrollbar-width: none;
 }
 
+#sidebar .sidebar-inner::-webkit-scrollbar {
+    display: none;
+}    
 /* Slide-in */
 #sidebar.active {
     transform: translateX(0);
@@ -102,8 +106,9 @@
 
 #sidebar .get-in-touch {
     border-top: 1px solid #ddd;
-    padding-top: 15px;
-    margin-top: 20px;
+    margin-top: 3px;
+    padding-top: 5px;
+   
 }
 
 /* -------------------- */

@@ -8,29 +8,24 @@
     <title>Home - Portfolio</title>
 
     <!-- CSS -->
-    <link rel="stylesheet" href="css/app.html">
+    <link rel="stylesheet" href="css/app.css">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/sidebar.css">
     <link rel="stylesheet" href="css/projects.css">
     <link rel="stylesheet" href="css/resume.css">
 
     <!-- Font Awesome -->
-    <link rel="stylesheet" href="../cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@700&family=Open+Sans:wght@400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
 
     <style>
         /* ✅ Always show hamburger (desktop + mobile) */
-        #hamburger {
-            position: fixed;
-            top: 15px;
-            left: 15px;
-            z-index: 9999;
-            background: none;
-            border: none;
-            font-size: 1.8rem;
-            color: #3b82f6; /* Blue icon for visibility */
-            cursor: pointer;
-            display: block;
-        }
+       
+
+        /* body.sidebar-open #hamburger{
+            left:270px;
+        }*/
 
         /* ✅ Sidebar (keeps your original white background) */
         #sidebar {
@@ -53,24 +48,141 @@
         #main-content {
             transition: margin-left 0.3s ease;
         }
-
+        /*
         body.sidebar-open #main-content {
-            margin-left: 260px;
+            margin-left: 230px;
         }
-
+        */
         @media (max-width: 768px) {
             body.sidebar-open #main-content {
                 margin-left: 0;
             }
+        }    
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+
+         /* ✅ Fix header overlapping sidebar */
+            .top-header {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                padding: 10px 20px 0px 0px;
+                background: none;
+                /*border-bottom: 1px solid #ddd;*/
+                position: relative;
+                z-index: 1000;   
+            }
+            .header-container {
+               display: flex;
+               align-items: flex-end;
+               justify-content: space-between;
+               width: 100%;
+               padding-left: 45px;
+               padding-right: 40px; 
+            }
+        /*.header-container a{
+            font-family: "Poppins",sans-serif;
+            font-size: 1.35rem;
+            font-weight:600;
+            text-decoration: none;
+            letter-spacing: 0.3px;
+            position: relative;
+        }*/
+
+        .logo {
+            font-weight: 700;
+            color: #222;
+            text-decoration: none;
+            font-size: 1.4rem;
+            position: relative;
+            display: inline-block;
+            bottom:0;
         }
+         .header-socials {
+            display: flex;
+            gap: 12px;
+            align-items: flex-end;
+        }
+        #hamburger {
+            background: none;
+            border: none;
+            font-size: 1.8rem;
+            color: #3b82f6;
+            cursor: pointer;
+            position: absolute;
+            left: -5px;
+            bottom:0;
+            transform: translateY(2px);
+            z-index: 1200;
+            }
+        .header-unit {
+            position:relative;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex: 1; /* takes remaining width */ 
+            padding-bottom: 0px;
+            }
+        .logo-wrapper{
+            display: flex;
+            flex-direction: column;
+            position: relative;
+        }
+         .blue-line {
+            position: absolute;
+            bottom: 0;
+            left: 45px;
+            right: 0;
+            height: 3px;
+            background: #3b82f6;
+        }
+        .hero-section {
+            margin-top: 5px;
+            padding-top: 0;
+   }
+        .hero-text h2 {
+            margin-bottom: 10px;
+            font-size: 2.5rem;
+            letter-spacing: 0.2px;  /* reduce space below “Hi, I'm Kaira Kelvin” */
+}
+
+        .hero-text p {
+            margin-top: 0;
+            font-family: 'Open Sans', sans-serif;
+            font-size: 1.05rem;
+            line-height: 1.8;
+            max-width: 700px;
+            letter-spacing: 0.1px;
+            margin-bottom: 1.8rem;       /* remove top gap before the paragraph */
+}
+        .portfolio-text{
+            font-size: 0.9rem;
+            font-weight: 500;
+            margin-left:5px;
+        }
+        .hero-image img{
+            width: 300px;
+            height: 300px;
+            border-radius:50%;
+            object-fit:cover;
+        }
+     @media (max-width:768px){
+        .hero-content{
+            flex-direction: column;
+            gap:20px;
+        }
+        .hero-text .blue-line {
+    position: relative;  /* not absolute anymore */
+    height: 3px;
+    background: #3b82f6;
+    width: 100px;        /* or any width you like */
+    margin-top: 20px;    /* space between paragraph and line */
+}
+
+     }   
+
     </style>
 </head>
 <body>
-
-    <!-- ✅ Hamburger Button -->
-    <button id="hamburger" aria-label="Toggle Menu">
-        <i class="fas fa-bars"></i>
-    </button>
 
     <!-- ✅ Sidebar -->
     <!-- ✅ SIDEBAR -->
@@ -114,29 +226,28 @@
         
 <!-- ✅ Top Header -->
 <header class="top-header">
-    <div class="header-container">
-        <!-- ✅ Hamburger before your name -->
-        <button id="hamburger" class="blue-hamburger">
-            <i class="fas fa-bars"></i>
-        </button>
-
-        <!-- ✅ Logo / Name -->
+    <div class="header-unit">
+        
+        <div class="header-container">
+            <button id="hamburger"><i class="fas fa-bars"></i></button>
         <a href="index.html" class="logo">
-            <strong>Kelvin Kiarie Kaira</strong>
-            <span class="portfolio-text">Portfolio</span>
-        </a>
+                <strong>Kelvin Kiarie Kaira </strong> 
+                <span class="portfolio-text">Portfolio</span>
+         </a>
+         </div>       
 
-        <!-- ✅ Social Icons -->
-        <div class="header-socials">
-            <a href="https://x.com/nash_kevoh" target="_blank"><i class="fab fa-twitter"></i></a>
-            <a href="https://www.linkedin.com/in/kelvin-kiarie-906b09135/" target="_blank"><i class="fab fa-linkedin"></i></a>
-            <a href="https://dev.to/gateru" target="_blank"><i class="fab fa-medium"></i></a>
-            <a href="https://github.com/gateru254" target="_blank"><i class="fab fa-github"></i></a>
+            <!-- Social Icons aligned to far right -->
+            <div class="header-socials">
+                <a href="https://x.com/nash_kevoh" target="_blank"><i class="fab fa-twitter"></i></a>
+                <a href="https://www.linkedin.com/in/kelvin-kiarie-906b09135/" target="_blank"><i class="fab fa-linkedin"></i></a>
+                <a href="https://dev.to/gateru" target="_blank"><i class="fab fa-medium"></i></a>
+                <a href="https://github.com/gateru254" target="_blank"><i class="fab fa-github"></i></a>
+            </div>
+            <!--line inside header-unit-->
+            <div class="blue-line"></div>
         </div>
-    </div>
-
-    <div class="blue-line"></div>
 </header>
+
 
 <!-- ✅ Hero Section -->
 <section id="bio" class="hero-section">
