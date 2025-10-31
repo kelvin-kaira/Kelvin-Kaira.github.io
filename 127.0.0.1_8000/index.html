@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Mirrored from 127.0.0.1:8000/ by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 31 Oct 2025 00:41:23 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+    <meta charset="UTF-8">
+    <title>Home - Portfolio</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/app.html">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/sidebar.css">
+    <link rel="stylesheet" href="css/projects.css">
+    <link rel="stylesheet" href="css/resume.css">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="../cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <style>
+        /* ✅ Always show hamburger (desktop + mobile) */
+        #hamburger {
+            position: fixed;
+            top: 15px;
+            left: 15px;
+            z-index: 9999;
+            background: none;
+            border: none;
+            font-size: 1.8rem;
+            color: #3b82f6; /* Blue icon for visibility */
+            cursor: pointer;
+            display: block;
+        }
+
+        /* ✅ Sidebar (keeps your original white background) */
+        #sidebar {
+            width: 260px;
+            height: 100vh;
+            position: fixed;
+            top: 0;
+            left: -260px;
+            background: #f3f3f3; /* your original color */
+            transition: left 0.3s ease;
+            z-index: 1000;
+            box-shadow: 3px 0 8px rgba(0, 0, 0, 0.1);
+        }
+
+        #sidebar.active {
+            left: 0;
+        }
+
+        /* ✅ Content */
+        #main-content {
+            transition: margin-left 0.3s ease;
+        }
+
+        body.sidebar-open #main-content {
+            margin-left: 260px;
+        }
+
+        @media (max-width: 768px) {
+            body.sidebar-open #main-content {
+                margin-left: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- ✅ Hamburger Button -->
+    <button id="hamburger" aria-label="Toggle Menu">
+        <i class="fas fa-bars"></i>
+    </button>
+
+    <!-- ✅ Sidebar -->
+    <!-- ✅ SIDEBAR -->
+<div id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+        <h3 class="menu-title">Menu</h3>
+
+        <ul class="menu-list">
+            <li><a href="index.html">Homepage</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="resume.html">View My Resume</a></li>
+            <li><a href="datasets.html">Find Sample Datasets</a></li>
+            <li><a href="https://dev.to/gateru">Visit My Blog</a></li>
+        </ul>
+
+        <div class="get-in-touch">
+            <h3>Get in touch</h3>
+            <p><i class="fas fa-tools"></i> Available for Data Analysis & IT Support roles (remote/physical).</p>
+            <p><i class="fas fa-handshake"></i> Reach out through email or call.</p>
+
+            <div class="contact-item">
+                <i class="fas fa-envelope"></i>
+                <a href="mailto:kelvinkiarie6@gmail.com">kelvinkiarie6@gmail.com</a>
+            </div>
+
+            <div class="contact-item">
+                <i class="fas fa-phone"></i>
+                <a href="tel:+254791025786">+254 791025786</a>
+            </div>
+
+            <div class="contact-item location-item">
+                <i class="fas fa-map-marker-alt"></i>
+                <span>Nairobi, Kenya</span>
+            </div>    
+        </div>
+    </div>
+</div>
+
+    <!-- ✅ Main Content -->
+    <div id="main-content" class= "main-content">
+        
+<!-- ✅ Top Header -->
+<header class="top-header">
+    <div class="header-container">
+        <!-- ✅ Hamburger before your name -->
+        <button id="hamburger" class="blue-hamburger">
+            <i class="fas fa-bars"></i>
+        </button>
+
+        <!-- ✅ Logo / Name -->
+        <a href="index.html" class="logo">
+            <strong>Kelvin Kiarie Kaira</strong>
+            <span class="portfolio-text">Portfolio</span>
+        </a>
+
+        <!-- ✅ Social Icons -->
+        <div class="header-socials">
+            <a href="https://x.com/nash_kevoh" target="_blank"><i class="fab fa-twitter"></i></a>
+            <a href="https://www.linkedin.com/in/kelvin-kiarie-906b09135/" target="_blank"><i class="fab fa-linkedin"></i></a>
+            <a href="https://dev.to/gateru" target="_blank"><i class="fab fa-medium"></i></a>
+            <a href="https://github.com/gateru254" target="_blank"><i class="fab fa-github"></i></a>
+        </div>
+    </div>
+
+    <div class="blue-line"></div>
+</header>
+
+<!-- ✅ Hero Section -->
+<section id="bio" class="hero-section">
+    <div class="hero-content">
+        <div class="hero-text">
+            <h2>Hi, I'm Kaira Kelvin</h2>
+            <p>
+                I am a <strong>Certified Data and Business Intelligence Analyst</strong> 
+                with a passion for transforming complex datasets into clear, actionable insights. 
+                With over 2 years of experience, I empower businesses to make informed decisions 
+                through the power of analysis and visualization. My expertise also lies in creating interactive 
+                dashboards with Tableau and Power BI. Besides transforming data, I provide frontline 
+                technical support, achieving a 90% first-call resolution rate in resolving technical issues 
+                leading to improved user satisfaction.
+            </p>
+
+            <!-- ✅ Contact Buttons -->
+            <div class="contact-buttons">
+                <a href="mailto:kelvinkiarie6@gmail.com" class="contact-btn">Email Me</a>
+                <a href="tel:+254791025786" class="contact-btn">Call Me</a>
+            </div>
+        </div>
+
+        <div class="hero-image">
+            <img src="images/kiarie.jpg" alt="Kaira Kelvin">
+        </div>
+    </div>
+</section>
+
+<!-- ✅ Skills Section -->
+<section id="skills" class="skills-section">
+    <h2>Skills and Experiences</h2>
+    <div class="skills-divider"></div>
+
+    <div class="skills-grid">
+
+        <!-- Data Analysis -->
+        <div class="skill-card">
+            <div class="skill-icon">
+                <img src="images/daq.png" alt="Data Analysis">
+            </div>
+            <div class="skill-info">
+                <h3>Data Analysis</h3>
+                <p>Using Power BI, SQL, and Excel, I analyze data to extract insights that are essential for making decisions.</p>
+            </div>
+        </div>
+
+        <!-- Data Visualization -->
+        <div class="skill-card">
+            <div class="skill-icon">
+                <img src="images/vis.png" alt="Data Visualization">
+            </div>
+            <div class="skill-info">
+                <h3>Data Visualization</h3>
+                <p>I use Power BI, Tableau, and Excel to create dashboards and reports. Power BI allows for interactive dashboards, 
+                    and Tableau provides advanced visualization.</p>
+            </div>
+        </div>
+
+        <!-- Communication & Mentoring -->
+        <div class="skill-card">
+            <div class="skill-icon">
+                <img src="images/communication.png" alt="Communication and Mentoring">
+            </div>
+            <div class="skill-info">
+                <h3>Communication & Mentoring</h3>
+                <p>I effectively share insights and train team members.</p>
+                <p>Ability to handle Q&A, excellent listening and questioning skills.</p>
+            </div>
+        </div>
+
+        <!-- Biometric Installation -->
+        <div class="skill-card">
+            <div class="skill-icon">
+                <img src="images/biom.png" alt="Biometric Installation">
+            </div>
+            <div class="skill-info">
+                <h3>Biometric Installation</h3>
+                <p>Install and configure biometric systems for access control.</p>
+            </div>
+        </div>
+
+        <!-- CCTV Installation -->
+        <div class="skill-card">
+            <div class="skill-icon">
+                <img src="images/camera.png" alt="CCTV Installation">
+            </div>
+            <div class="skill-info">
+                <h3>CCTV Installation</h3>
+                <p>Install and configure NVR/DVR for optimal video storage and playback.</p>
+                <p>Configure and maintain IP cameras, cable pulling, and full setup.</p>
+            </div>
+        </div>
+
+        <!-- End User Support -->
+        <div class="skill-card">
+            <div class="skill-icon">
+                <img src="images/IT.png" alt="End User Support">
+            </div>
+            <div class="skill-info">
+                <h3>End User Support</h3>
+                <p>Utilize ITSM tools, monitor MPLS links, and provide IT troubleshooting.</p>
+            </div>
+        </div>
+
+        <!-- Project Management -->
+        <div class="skill-card">
+            <div class="skill-icon">
+                <img src="images/project.png" alt="Project Management">
+            </div>
+            <div class="skill-info">
+                <h3>Project Management</h3>
+                <p>I use AutoCAD to design data points. Also, I oversaw the LAN upgrade at JKIA Forodha House, 
+                    leveraging my expertise in network design, implementation, and team collaboration.</p>
+            </div>
+        </div>
+
+        <!-- Time Management -->
+        <div class="skill-card">
+            <div class="skill-icon">
+                <img src="images/time.png" alt="Time Management">
+            </div>
+            <div class="skill-info">
+                <h3>Time Management & Leadership</h3>
+                <p>Proven track record of delivering projects on schedule without compromising quality. Also,
+                experienced in guiding and motivating teams to achieve common goals.</p>
+            </div>
+        </div>
+
+        <!-- Technical Writer -->
+        <div class="skill-card">
+            <div class="skill-icon">
+                <img src="images/writing.png" alt="Technical Writer">
+            </div>
+            <div class="skill-info">
+                <h3>Technical Writer</h3>
+                <p>Excel at demystifying complex topics, making them easy to understand for everyone.</p>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+    </div>
+
+    <!-- ✅ Script -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const sidebar = document.getElementById('sidebar');
+            const hamburger = document.getElementById('hamburger');
+            const body = document.body;
+
+            hamburger.addEventListener('click', () => {
+                sidebar.classList.toggle('active');
+                body.classList.toggle('sidebar-open');
+            });
+        });
+    </script>
+
+</body>
+
+<!-- Mirrored from 127.0.0.1:8000/ by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 31 Oct 2025 00:41:36 GMT -->
+</html>

@@ -1,0 +1,82 @@
+/* ================================
+   Resume Page Styles
+   ================================ */
+
+.resume-section {
+    padding: 60px 20px;
+    background: #fff;
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+/* Resume Container */
+.resume-container {
+    margin: 30px 0;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    overflow: hidden;
+    box-shadow: 0px 2px 6px rgba(0,0,0,0.1);
+}
+
+/* PDF Iframe Styling */
+.resume-container iframe {
+    border: none;
+    border-radius: 8px;
+    width: 100%;
+    height: 700px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+}
+
+/* Download Button */
+.resume-download {
+    margin-top: 20px;
+}
+
+.resume-btn {
+    display: inline-block;
+    background: #55bbee;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 6px;
+    font-size: 15px;
+    text-decoration: none;
+    transition: background 0.3s ease;
+}
+
+.resume-btn:hover {
+    background: #0099dd;
+}
+
+/* ================================
+   Sidebar Overlay Behavior
+   ================================ */
+
+/* Sidebar should NOT push resume content */
+@media (min-width: 769px) {
+    .resume-section {
+        margin-left: 0; /* ✅ no push from sidebar */
+        max-width: 100%;
+        padding: 40px 30px;
+        text-align: left;
+    }
+}
+
+/* ================================
+   Responsive Design (Mobile/Tablets)
+   ================================ */
+@media (max-width: 768px) {
+    .resume-section {
+        margin-left: 0;
+        padding: 40px 15px;
+    }
+
+    .resume-container iframe {
+        height: 500px;
+    }
+
+    .resume-btn {
+        width: 100%;
+        text-align: center;
+    }
+}

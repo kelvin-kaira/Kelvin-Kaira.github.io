@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Mirrored from 127.0.0.1:8000/projects by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 31 Oct 2025 00:41:37 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+    <meta charset="UTF-8">
+    <title>Portfolio</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/app.html">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/sidebar.css">
+    <link rel="stylesheet" href="css/projects.css">
+    <link rel="stylesheet" href="css/resume.css">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="../cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <style>
+        /* ✅ Always show hamburger (desktop + mobile) */
+        #hamburger {
+            position: fixed;
+            top: 15px;
+            left: 15px;
+            z-index: 9999;
+            background: none;
+            border: none;
+            font-size: 1.8rem;
+            color: #3b82f6; /* Blue icon for visibility */
+            cursor: pointer;
+            display: block;
+        }
+
+        /* ✅ Sidebar (keeps your original white background) */
+        #sidebar {
+            width: 260px;
+            height: 100vh;
+            position: fixed;
+            top: 0;
+            left: -260px;
+            background: #f3f3f3; /* your original color */
+            transition: left 0.3s ease;
+            z-index: 1000;
+            box-shadow: 3px 0 8px rgba(0, 0, 0, 0.1);
+        }
+
+        #sidebar.active {
+            left: 0;
+        }
+
+        /* ✅ Content */
+        #main-content {
+            transition: margin-left 0.3s ease;
+        }
+
+        body.sidebar-open #main-content {
+            margin-left: 260px;
+        }
+
+        @media (max-width: 768px) {
+            body.sidebar-open #main-content {
+                margin-left: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- ✅ Hamburger Button -->
+    <button id="hamburger" aria-label="Toggle Menu">
+        <i class="fas fa-bars"></i>
+    </button>
+
+    <!-- ✅ Sidebar -->
+    <!-- ✅ SIDEBAR -->
+<div id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+        <h3 class="menu-title">Menu</h3>
+
+        <ul class="menu-list">
+            <li><a href="index.html">Homepage</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="resume.html">View My Resume</a></li>
+            <li><a href="datasets.html">Find Sample Datasets</a></li>
+            <li><a href="https://dev.to/gateru">Visit My Blog</a></li>
+        </ul>
+
+        <div class="get-in-touch">
+            <h3>Get in touch</h3>
+            <p><i class="fas fa-tools"></i> Available for Data Analysis & IT Support roles (remote/physical).</p>
+            <p><i class="fas fa-handshake"></i> Reach out through email or call.</p>
+
+            <div class="contact-item">
+                <i class="fas fa-envelope"></i>
+                <a href="mailto:kelvinkiarie6@gmail.com">kelvinkiarie6@gmail.com</a>
+            </div>
+
+            <div class="contact-item">
+                <i class="fas fa-phone"></i>
+                <a href="tel:+254791025786">+254 791025786</a>
+            </div>
+
+            <div class="contact-item location-item">
+                <i class="fas fa-map-marker-alt"></i>
+                <span>Nairobi, Kenya</span>
+            </div>    
+        </div>
+    </div>
+</div>
+
+    <!-- ✅ Main Content -->
+    <div id="main-content" class= "main-content">
+        <section class="projects">
+    <h1>Projects</h1>
+
+    <div class="projects-grid">
+        
+                    <div class="project-card">
+                                    <img src="images/fas.png" alt="Fashion Dashboard">
+                
+                <h3>Fashion Dashboard</h3>
+                <p>Submission for Fashion Analysis Challenge (APR 2025)</p>
+
+                
+                                    <p class="tools"><strong>Tools:</strong> Microsoft Excel, Microsoft Power BI, Figma, SQL, Microsoft PowerPoint</p>
+                
+                <div class="project-buttons">
+                    
+                    <a href="https://dev.to/gateru/fashion-analysis-understanding-customer-churn-in-fashion-industry-3jge" class="btn-read" target="_blank">Read More</a>
+
+                    
+                                            <a href="files/fashion.pptx" class="btn-dashboard" download>Download Dashboard</a>
+
+                    
+                                    </div>
+            </div>
+                    <div class="project-card">
+                                    <img src="images/cust.png" alt="Customer Churn Analysis">
+                
+                <h3>Customer Churn Analysis</h3>
+                <p>Power BI dashboard analyzing customer churn patterns.</p>
+
+                
+                                    <p class="tools"><strong>Tools:</strong> Microsoft Excel, Microsoft Power BI</p>
+                
+                <div class="project-buttons">
+                    
+                    <a href="https://dev.to/gateru/customer-churn-analysis-with-power-bi-understanding-why-customers-leave-4gpk" class="btn-read" target="_blank">Read More</a>
+
+                    
+                                            <a href="https://app.powerbi.com/links/s2cnqgFn_0?ctid=e9fd2f4e-d7d8-40ff-8e75-de7ab6185b42&amp;pbi_source=linkShare" class="btn-dashboard" target="_blank">View Dashboard</a>
+
+                                    </div>
+            </div>
+                    <div class="project-card">
+                                    <img src="images/crime.png" alt="Women Crime Analysis in India">
+                
+                <h3>Women Crime Analysis in India</h3>
+                <p>Dashboard visualizing crime trends affecting women across India.</p>
+
+                
+                                    <p class="tools"><strong>Tools:</strong> Microsoft Excel, Microsoft Power BI, Microsoft PowerPoint</p>
+                
+                <div class="project-buttons">
+                    
+                    <a href="https://dev.to/gateru/analyzing-crime-against-women-in-india-26og" class="btn-read" target="_blank">Read More</a>
+
+                    
+                                            <a href="https://app.powerbi.com/links/SYwUa1m6mi?ctid=e9fd2f4e-d7d8-40ff-8e75-de7ab6185b42&amp;pbi_source=linkShare" class="btn-dashboard" target="_blank">View Dashboard</a>
+
+                                    </div>
+            </div>
+                    <div class="project-card">
+                                    <img src="images/cb.png" alt="Wote County Budget Analysis">
+                
+                <h3>Wote County Budget Analysis</h3>
+                <p>Interactive Power BI dashboard for Wote County budget breakdown.</p>
+
+                
+                                    <p class="tools"><strong>Tools:</strong> Microsoft Power Point, Microsoft Excel</p>
+                
+                <div class="project-buttons">
+                    
+                    <a href="https://dev.to/gateru/budget-analysis-report-wote-county-watchdog-fy-2019-2nf2" class="btn-read" target="_blank">Read More</a>
+
+                    
+                                            <a href="https://app.powerbi.com/links/l-0WUEEGte?ctid=e9fd2f4e-d7d8-40ff-8e75-de7ab6185b42&amp;pbi_source=linkShare" class="btn-dashboard" target="_blank">View Dashboard</a>
+
+                                    </div>
+            </div>
+                    <div class="project-card">
+                                    <img src="images/dcleaning.png" alt="Busara R&amp;A">
+                
+                <h3>Busara R&amp;A</h3>
+                <p>Busara research analysis project overview.</p>
+
+                
+                                    <p class="tools"><strong>Tools:</strong> Microsoft Power Point, SQL, Python</p>
+                
+                <div class="project-buttons">
+                    
+                    <a href="https://dev.to/gateru/breaking-barriers-understanding-and-improving-hiv-prevention-pill-use-in-kenya-1emg" class="btn-read" target="_blank">Read More</a>
+
+                    
+                                            <a href="files/Busara%20report.pptx" class="btn-dashboard" download>Download Dashboard</a>
+
+                    
+                                    </div>
+            </div>
+                    <div class="project-card">
+                                    <img src="images/Machine.png" alt="Machine Downtime">
+                
+                <h3>Machine Downtime</h3>
+                <p>Analysis of machine downtime in Mook Industry.</p>
+
+                
+                                    <p class="tools"><strong>Tools:</strong> DBeaver, SQL, Dev.to, Microsoft Excel</p>
+                
+                <div class="project-buttons">
+                    
+                    <a href="https://dev.to/gateru/analyzing-machine-downtime-21k0" class="btn-read" target="_blank">Read More</a>
+
+                    
+                                            <a href="view-script/Machine_dwt.sql" class="btn-dashboard" target="_blank">View Script</a>
+
+                                    </div>
+            </div>
+                    <div class="project-card">
+                                    <img src="images/elec.png" alt="Electrifying Insights in BI">
+                
+                <h3>Electrifying Insights in BI</h3>
+                <p>Analysis of global electronics sales data from 2016 to 2021, uncovering revenue trends and performance insights across continents.</p>
+
+                
+                                    <p class="tools"><strong>Tools:</strong> Microsoft Excel, Microsoft Power BI, DAX, Data Modeling</p>
+                
+                <div class="project-buttons">
+                    
+                    <a href="https://dev.to/gateru/electrifing-insights-with-bi-3mb" class="btn-read" target="_blank">Read More</a>
+
+                    
+                                            <a href="https://app.powerbi.com/links/EBkyLOjdMD?ctid=fb931f2d-4814-459c-8f65-4af713b321af&amp;pbi_source=linkShare" class="btn-dashboard" target="_blank">View Dashboard</a>
+
+                                    </div>
+            </div>
+                    <div class="project-card">
+                                    <img src="images/databel.png" alt="Analyzing Customer Churn">
+                
+                <h3>Analyzing Customer Churn</h3>
+                <p>The objective of this project was to analyze customer behavior and identify the drivers of churn to inform retention strategies.</p>
+
+                
+                                    <p class="tools"><strong>Tools:</strong> PostgreSQL, DBeaver, Microsoft PowerPoint, Aiven, Microsoft Excel</p>
+                
+                <div class="project-buttons">
+                    
+                    <a href="https://dev.to/gateru/understanding-customer-churn-through-sql-a-data-driven-exploration-3c3a" class="btn-read" target="_blank">Read More</a>
+
+                    
+                                            <a href="view-script/churn_rate.sql" class="btn-dashboard" target="_blank">View Script</a>
+
+                                    </div>
+            </div>
+            </div>
+</section>
+    </div>
+
+    <!-- ✅ Script -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const sidebar = document.getElementById('sidebar');
+            const hamburger = document.getElementById('hamburger');
+            const body = document.body;
+
+            hamburger.addEventListener('click', () => {
+                sidebar.classList.toggle('active');
+                body.classList.toggle('sidebar-open');
+            });
+        });
+    </script>
+
+</body>
+
+<!-- Mirrored from 127.0.0.1:8000/projects by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 31 Oct 2025 01:00:34 GMT -->
+</html>
