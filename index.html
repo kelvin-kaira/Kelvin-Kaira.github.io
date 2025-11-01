@@ -37,13 +37,18 @@
             left: -260px;
             background: #f3f3f3; /* your original color */
             transition: left 0.3s ease;
-            z-index: 1000;
+            z-index: 3000;
             box-shadow: 3px 0 8px rgba(0, 0, 0, 0.1);
         }
+
+	    .sidebar-open .top-header{
+		    z-index: 1000;
+	   }
 
         #sidebar.active {
             left: 0;
         }
+		
 
         /* ✅ Content */
         #main-content {
@@ -123,6 +128,32 @@
             flex: 1; /* takes remaining width */ 
             padding-bottom: 0px;
             }
+		 /* Desktop button */
+		.sidebar-close-btn.desktop {
+			display: block;
+			position: absolute;
+			top: 20px;
+			left: 220px; /* adjust for sidebar width */
+			background: none;
+			border: none;
+			font-size: 2.0rem;
+			color: #3b82f6;
+			cursor: pointer;
+			z-index: 3500;
+			transition: transform 0.2s ease, color 0.3s ease;
+		}
+		.sidebar-close-btn.desktop i {
+			font-size: 1.8;
+			color: #3b82f6;
+		}	
+		/* Mobile button hidden by default */
+		.sidebar-close-btn.mobile {
+			display: none;
+}
+        @media (max-width: 768px) {
+        .sidebar-close-btn.desktop {
+            display: none; /* hide desktop button on mobile */
+    }
         .logo-wrapper{
             display: flex;
             flex-direction: column;
@@ -166,6 +197,19 @@
             border-radius:50%;
             object-fit:cover;
         }
+		.hero-image{
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			width:100%;
+		}
+    @media(max-width:768px){
+		.hero-image img{
+			width:250px;
+			height:250px;
+		}
+	}
+
      @media (max-width:768px){
         .hero-content{
             flex-direction: column;
@@ -177,7 +221,21 @@
     background: #3b82f6;
     width: 100px;        /* or any width you like */
     margin-top: 20px;    /* space between paragraph and line */
-}
+        }
+     .sidebar-close-btn.mobile{
+		position: absolute;
+		display:  block;
+		top: 20px;
+		left: 15px;
+		background:none;
+		border:none;
+		font-size: 1.8rem;
+		color: #3b82f6;
+        cursor: pointer;
+		z-index: 3500;
+		transition: transform 0,2s ease, color 0.3s ease;
+	 }
+	
 
      }   
 
@@ -189,6 +247,12 @@
     <!-- ✅ SIDEBAR -->
 <div id="sidebar" class="sidebar">
     <div class="sidebar-inner">
+		<button id="close-sidebar-desktop" class="sidebar-close-btn desktop">
+            <i class="fas fa-minus"></i>
+        </button>
+		<button id="close-sidebar-mobile" class="sidebar-close-btn mobile">
+           <i class="fas fa-arrow-left"></i>
+         </button> 
         <h3 class="menu-title">Menu</h3>
 
         <ul class="menu-list">
@@ -398,12 +462,24 @@
     <script>
         document.addEventListener('DOMContentLoaded', () => {
             const sidebar = document.getElementById('sidebar');
-            const hamburger = document.getElementById('hamburger');
-            const body = document.body;
+			const hamburger = document.getElementById('hamburger');
+			const closeDesktop = document.getElementById('close-sidebar-desktop');
+			const closeMobile = document.getElementById('close-sidebar-mobile');
+			const body = document.body;
 
-            hamburger.addEventListener('click', () => {
-                sidebar.classList.toggle('active');
-                body.classList.toggle('sidebar-open');
+			hamburger.addEventListener('click', () => {
+				sidebar.classList.add('active');
+				body.classList.add('sidebar-open');
+			});
+
+			closeDesktop.addEventListener('click', () => {
+				sidebar.classList.remove('active');
+				body.classList.remove('sidebar-open');
+			});
+
+			closeMobile.addEventListener('click', () => {
+				sidebar.classList.remove('active');
+				body.classList.remove('sidebar-open');
             });
         });
     </script>
